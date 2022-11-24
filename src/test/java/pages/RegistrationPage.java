@@ -28,6 +28,7 @@ public class RegistrationPage {
 
         return this;
     }
+
     public RegistrationPage setFirstName(String firstName) {
         firstNameInput.setValue(firstName);
         return this;
@@ -40,57 +41,66 @@ public class RegistrationPage {
 
     public RegistrationPage setEmail(String userEmail) {
         userEmailInput.setValue(userEmail);
-                return this;
-    }public RegistrationPage setGender(String userGender) {
+        return this;
+    }
+
+    public RegistrationPage setGender(String userGender) {
         $("#genterWrapper").$(byText(userGender)).click();
-                return this;
+        return this;
     }
 
     public RegistrationPage setNumber(String userNumber) {
         userNumberInput.setValue(userNumber);
-               return this;
+        return this;
     }
+
     public RegistrationPage setBirthDay(String day, String month, String year) {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $("[aria-label$='"+ month + " " + day + "th, " + year + "']").click();
-               return this;
+        $("[aria-label$='" + month + " " + day + "th, " + year + "']").click();
+        return this;
     }
 
     public RegistrationPage setSubject(String subject) {
         subjectInput.setValue(subject).pressEnter();
-                return this;
+        return this;
     }
 
     public RegistrationPage setHobby(String hobby) {
         hobbyInput.$(byText(hobby)).click();
-               return this;
+        return this;
     }
 
     public RegistrationPage setTestImg(String testImg) {
         testImgInput.uploadFromClasspath("img/" + testImg);
-               return this;
+        return this;
     }
 
     public RegistrationPage setCurrentAddress(String currentAddress) {
         currentAddressInput.setValue(currentAddress);
-                return this;
+        return this;
     }
 
     public RegistrationPage setState(String state) {
         $("#state").scrollTo().click();
         $("#stateCity-wrapper").$(byText(state)).click();
-                return this;
+        return this;
     }
 
     public RegistrationPage setCity(String city) {
         $("#city").click();
         $("#stateCity-wrapper").$(byText(city)).click();
-                return this;
+        return this;
     }
+
     public RegistrationPage submit() {
         $("#submit").scrollTo().click();
-                return this;
+        return this;
+    }
+
+    public RegistrationPage tableCheck(String value){
+        $(".table-responsive").shouldHave(text(value));
+        return this;
     }
 }

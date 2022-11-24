@@ -8,13 +8,6 @@ import pages.RegistrationPage;
 
 //import java.io.File;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
-
-
-
 // только success test
 public class PracticeFormTest {
 
@@ -24,7 +17,7 @@ public class PracticeFormTest {
     String userEmail = "solo@awg.ru";
     String userGender = "Male";
     String userNumber = "9999999999";
-    String userDay = "06";
+    String userDay = "6";
     String userMonth = "October";
     String userYear = "2000";
     String subject = "Computer Science";
@@ -44,6 +37,7 @@ public class PracticeFormTest {
     void successFillTest() {
 
         registrationPage.openPage()
+
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(userEmail)
@@ -56,12 +50,21 @@ public class PracticeFormTest {
                 .setCurrentAddress(currentAddress)
                 .setState(state)
                 .setCity(city)
-                .submit();
 
+                .submit()
 
-        $(".table-responsive").shouldHave(text(firstName), text(lastName),
-                text(userEmail), text(userNumber), text(userDay + " " + userMonth + "," + userYear), text(testImg), text(hobby),
-                text(currentAddress), text(state + " " + city));
+                .tableCheck(firstName)
+                .tableCheck(lastName)
+                .tableCheck(userEmail)
+                .tableCheck(userGender)
+                .tableCheck(userNumber)
+                .tableCheck(userDay + " " + userMonth + "," + userYear)
+                .tableCheck(subject)
+                .tableCheck(hobby)
+                .tableCheck(testImg)
+                .tableCheck(currentAddress)
+                .tableCheck(state)
+                .tableCheck(city);
     }
 }
 
