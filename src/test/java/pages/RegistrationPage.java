@@ -54,7 +54,7 @@ public class RegistrationPage {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $("[aria-label$='" + month + " " + day + "th, " + year + "']").click();
+        $("[aria-label$='"+ month + " " + day + "th, " + year + "']").click();
                return this;
     }
 
