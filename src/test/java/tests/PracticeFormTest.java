@@ -12,20 +12,20 @@ import pages.RegistrationPage;
 public class PracticeFormTest {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    String firstName = "Alex";
-    String lastName = "Solo";
-    String userEmail = "solo@awg.ru";
-    String userGender = "Male";
-    String userNumber = "9999999999";
-    String userDay = "6";
-    String userMonth = "October";
-    String userYear = "2000";
-    String subject = "Computer Science";
-    String hobby = "Reading";
-    String testImg = "testImg.jpg";
-    String currentAddress = "City Street House";
-    String state = "Haryana";
-    String city = "Karnal";
+    String firstName = "Alex",
+            lastName = "Solo",
+            userEmail = "solo@awg.ru",
+            userGender = "Male",
+            userNumber = "9999999999",
+            userDay = "6",
+            userMonth = "October",
+            userYear = "2000",
+            subject = "Computer Science",
+            hobby = "Reading",
+            testImg = "testImg.jpg",
+            currentAddress = "City Street House",
+            state = "Haryana",
+            city = "Karnal";
 
     @BeforeAll
     static void beforeAll() {

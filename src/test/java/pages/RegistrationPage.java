@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
     //locators
-    // х так много лишних потому что задание такое
+    // их так много лишних потому что задание такое
     SelenideElement
             headerTitle = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
